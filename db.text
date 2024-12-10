@@ -1,0 +1,17 @@
+CREATE DATABASE kullanici_yonetimi;
+
+USE kullanici_yonetimi;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NULL,
+    password VARCHAR(255) NULL,
+    ad VARCHAR(50) NULL,
+    soyad VARCHAR(50) NULL,
+    telefon VARCHAR(15) NULL,
+    email VARCHAR(100) NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+INSERT INTO users (username, password, ad, soyad, telefon, email)
+VALUES 
+('johndoe', 'password123', 'John', 'Doe', '555-1234', 'johndoe@example.com');
